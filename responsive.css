@@ -1,0 +1,240 @@
+@charset "utf-8";
+
+body {
+    min-width: 240px;
+}
+
+header {
+    height: 69vw;
+}
+
+#logo_menu {
+    width: 100%;
+    height: 18vw;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header_logo {
+    height: 18vw;
+}
+
+menu {
+    display: none;
+}
+
+.hamburger {
+    display: block;
+    width: 8vw;
+    height: 8vw;
+    margin-right: 15px;
+    position: relative;
+
+    border-color: transparent;
+    background: transparent;
+    cursor: pointer;
+}
+
+.hamburger_bar {
+    display: block;
+    width: 100%;
+    height: 15%;
+    position: absolute;
+    left: 0;
+    background: #000;
+    border-radius: 10px;
+}
+
+.hamburger_bar:nth-child(1) {
+    top: 0;
+}
+
+.hamburger_bar:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hamburger_bar:nth-child(3) {
+    top: 100%;
+    transform: translateY(-100%);
+}
+
+
+#hamburger_menu {
+    display: block;
+    transition-duration: 1s;
+    scale: 1 0;
+    translate: 0 -170px;
+
+    background-color: white;
+    width: 100%;
+    height: 350px;
+    margin: 0;
+    position: absolute;
+    z-index: 3;
+    padding: 0;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+#hamburger_menu>li {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px 0;
+    width: 90%;
+    border-bottom: black solid 2px;
+}
+
+#hamburger_menu>li:nth-of-type(1) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+header>img {
+    height: 51vw;
+}
+
+
+
+/*コース一覧*/
+
+#course_img {
+    max-height: none;
+    height: 400px;
+}
+
+#gray {
+    padding: 10px;
+    max-height: none;
+    height: 100%;
+}
+
+#gray>h3 {
+    margin: 5px;
+}
+
+
+
+#slide>img {
+    width: 6.5%;
+}
+
+#articles_frame {
+    margin: 20px 0 0;
+    height: 270px;
+    width: 87%;
+    max-width: none;
+}
+
+/*施設紹介*/
+
+#building_list {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+}
+
+#building_list>li {
+    width: min(380px, calc(100% - 10px));
+    height: 250px;
+    margin: 20px 0;
+    padding: 20px 5px;
+}
+
+#building_list>li>h3 {
+    font-size: larger;
+}
+
+#building_list>li>p {
+    font-size: larger;
+    margin: 14px 20px;
+    height: 65%;
+
+}
+
+
+/*説明会*/
+
+#briefing {
+    width: 80%;
+}
+
+#briefing>div {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: min(500px, 100%);
+    margin: 0 auto;
+    gap: 0px;
+}
+
+#briefing>h2 {
+    padding: 20px 0 25px;
+}
+
+#briefing p {
+    order: 1;
+    width: 100%;
+    margin: 40px 0;
+}
+
+#briefing>div>div {
+    width: 100%;
+}
+
+#briefing img {
+    width: 85%;
+    order: 0;
+    margin: 0 7.5%;
+}
+
+#briefing button {
+    padding: 0 10px 0;
+    font-size: 16px;
+}
+
+
+
+@media screen and (max-width: 400px) {
+
+    #hamburger_menu>li {
+        font-size: 0.95rem;
+    }
+
+    #hamburger_menu>li:nth-of-type(1) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    #slide>img {
+        width: 10%;
+    }
+
+    #articles_frame {
+        height: 400px;
+        width: 80%;
+        margin: 0;
+    }
+
+    #article0 {
+        font-size: 0.9rem;
+    }
+
+    #course_img {
+        height: 540px;
+    }
+
+    #course_name {
+        font-size: 22px;
+        height: 66px;
+    }
+
+    #building_list>li {
+        height: 300px;
+    }
+
+    #briefing button {
+        height: 60px;
+
+    }
+}
